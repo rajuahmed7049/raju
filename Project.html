@@ -1,0 +1,1999 @@
+<!-- Header Start-->
+<div id="header"></div>
+<!-- Header end -->
+    
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research Outputs | Public Health Research Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.8;
+            color: #263238;
+            background: #f5f8fa;
+        }
+
+        /* =========================================
+           HERO
+        ========================================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 57, 77, 0.98),
+                    rgba(13, 105, 112, 0.95)
+                );
+            color: white;
+            padding: 95px 20px 90px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 50%;
+            left: -190px;
+            top: -210px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 50%;
+            right: -250px;
+            bottom: -310px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 700;
+			color: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(19px, 2.5vw, 25px);
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 22px;
+			
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: auto;
+            color: rgba(255,255,255,0.78);
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================== */
+
+        .section-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #dfe8eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px 15px;
+            overflow-x: auto;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #455a64;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 17px;
+            white-space: nowrap;
+            transition: 0.25s ease;
+        }
+
+        .nav-container a:hover {
+            background: #e5f4f5;
+            color: #087f8c;
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================== */
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+        ========================================== */
+
+        .intro {
+            background: #ffffff;
+            padding: 38px 42px;
+            border-radius: 18px;
+            margin-bottom: 65px;
+            border-left: 5px solid #0b7d8b;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .intro p {
+            color: #455a64;
+            font-size: 17px;
+            margin-bottom: 17px;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           SECTION
+        ========================================== */
+
+        .section {
+            margin-bottom: 75px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            color: #0b8793;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section h2 {
+            color: #123b50;
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+
+        .section h3 {
+            color: #155e75;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #455a64;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           RESEARCH STATUS
+        ========================================== */
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 30px 0 55px;
+        }
+
+        .status-card {
+            background: #ffffff;
+            border: 1px solid #e1eaed;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.04);
+        }
+
+        .status-number {
+            font-size: 30px;
+            font-weight: 700;
+            color: #0b7d8b;
+            line-height: 1.2;
+            margin-bottom: 7px;
+        }
+
+        .status-label {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           MANUSCRIPT FEATURE
+        ========================================== */
+
+        .manuscript {
+            background: #ffffff;
+            border: 1px solid #dce8eb;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.055);
+            margin-top: 30px;
+        }
+
+        .manuscript-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b50,
+                    #176d77
+                );
+            color: white;
+            padding: 35px 38px;
+        }
+
+        .manuscript-status {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 5px 13px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .manuscript-header h3 {
+            color: white;
+            font-size: 26px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .manuscript-header p {
+            color: rgba(255,255,255,0.82);
+            margin: 0;
+        }
+
+        .manuscript-body {
+            padding: 35px 38px;
+        }
+
+        .research-focus {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin: 20px 0 28px;
+        }
+
+        .focus-tag {
+            background: #e7f4f5;
+            color: #12616d;
+            padding: 7px 14px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           TWO COLUMN
+        ========================================== */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            background: #f9fbfc;
+            border: 1px solid #e0e9ec;
+            border-radius: 15px;
+            padding: 28px;
+        }
+
+        .info-box h3 {
+            color: #123b50;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           METHODS
+        ========================================== */
+
+        .methods {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .method {
+            background: white;
+            border: 1px solid #e1eaed;
+            border-radius: 14px;
+            padding: 23px 17px;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        .method:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        .method-icon {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .method strong {
+            display: block;
+            color: #123b50;
+            font-size: 15px;
+        }
+
+        .method span {
+            color: #78909c;
+            font-size: 12px;
+        }
+
+
+        /* =========================================
+           RESEARCH AREAS
+        ========================================== */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .research-card {
+            background: #ffffff;
+            border: 1px solid #e1eaed;
+            border-radius: 15px;
+            padding: 24px 25px 24px 65px;
+            position: relative;
+            transition: 0.25s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+        }
+
+        .research-icon {
+            position: absolute;
+            left: 20px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #e5f4f5;
+            color: #087f8c;
+            font-size: 17px;
+        }
+
+        .research-card h3 {
+            color: #123b50;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .research-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           RESEARCH PIPELINE
+        ========================================== */
+
+        .pipeline {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            margin-top: 35px;
+        }
+
+        .pipeline-step {
+            flex: 1;
+            background: white;
+            border: 1px solid #dfe9ec;
+            padding: 25px 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .pipeline-step:first-child {
+            border-radius: 14px 0 0 14px;
+        }
+
+        .pipeline-step:last-child {
+            border-radius: 0 14px 14px 0;
+        }
+
+        .pipeline-step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -13px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #0b7d8b;
+            color: white;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .pipeline-number {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            background: #e5f4f5;
+            color: #087f8c;
+            font-weight: 700;
+        }
+
+        .pipeline-step strong {
+            display: block;
+            color: #123b50;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           DISSEMINATION
+        ========================================== */
+
+        .dissemination-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .dissemination {
+            background: white;
+            border: 1px solid #e1eaed;
+            border-radius: 15px;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .dissemination-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .dissemination strong {
+            display: block;
+            color: #123b50;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           DEVELOPMENT
+        ========================================== */
+
+        .development {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f6f7,
+                    #f7fbfc
+                );
+            border-left: 5px solid #0b8793;
+            border-radius: 16px;
+            padding: 38px;
+            margin-top: 30px;
+        }
+
+        .development h3 {
+            color: #123b50;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .development p {
+            color: #45636e;
+        }
+
+
+        /* =========================================
+           COMPETENCY GRID
+        ========================================== */
+
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .competency {
+            background: #ffffff;
+            border: 1px solid #dfe9ec;
+            border-radius: 13px;
+            padding: 20px;
+        }
+
+        .competency::before {
+            content: "✓";
+            display: inline-flex;
+            width: 25px;
+            height: 25px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #e5f4f5;
+            color: #087f8c;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .competency span {
+            color: #455a64;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           RESEARCH VALUES
+        ========================================== */
+
+        .values {
+            background: #123b50;
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .values h2 {
+            color: white;
+            margin-bottom: 22px;
+        }
+
+        .values p {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .value {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 13px;
+            padding: 22px 15px;
+            text-align: center;
+        }
+
+        .value-icon {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .value strong {
+            display: block;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FINAL VISION
+        ========================================== */
+
+        .vision {
+            background: #ffffff;
+            border: 1px solid #dce7ea;
+            border-left: 5px solid #0b7d8b;
+            padding: 40px;
+            border-radius: 17px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.04);
+        }
+
+        .vision h2 {
+            color: #123b50;
+            margin-bottom: 18px;
+        }
+
+        .vision p {
+            margin-bottom: 16px;
+        }
+
+        .vision p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+            background: #0c2d3c;
+            color: rgba(255,255,255,0.68);
+            text-align: center;
+            padding: 38px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            display: block;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 1000px) {
+
+            .methods {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dissemination-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 760px) {
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .container {
+                padding: 45px 18px;
+            }
+
+            .intro {
+                padding: 28px;
+            }
+
+            .status-grid,
+            .two-column,
+            .research-grid,
+            .competencies {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                display: block;
+            }
+
+            .pipeline-step,
+            .pipeline-step:first-child,
+            .pipeline-step:last-child {
+                border-radius: 0;
+                margin-bottom: 1px;
+            }
+
+            .pipeline-step:first-child {
+                border-radius: 14px 14px 0 0;
+            }
+
+            .pipeline-step:last-child {
+                border-radius: 0 0 14px 14px;
+            }
+
+            .pipeline-step:not(:last-child)::after {
+                content: "↓";
+                right: 50%;
+                top: auto;
+                bottom: -13px;
+                transform: translateX(50%);
+            }
+
+            .dissemination-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .manuscript-header,
+            .manuscript-body,
+            .development,
+            .values,
+            .vision {
+                padding: 28px 24px;
+            }
+
+            .nav-container {
+                justify-content: flex-start;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .methods,
+            .dissemination-grid,
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-subtitle {
+                font-size: 19px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Academic &amp; Public Health Research
+            </div>
+
+            <h1>
+                Research Outputs
+            </h1>
+
+            <div class="hero-subtitle">
+                Building Evidence for Better Public Health
+            </div>
+
+            <p class="hero-description">
+                Developing methodologically rigorous, ethically responsible,
+                and policy-relevant research addressing key public health
+                challenges in Bangladesh and other low- and middle-income
+                countries.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="section-nav">
+
+        <div class="nav-container">
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+            <a href="#manuscript">
+                Manuscript
+            </a>
+
+            <a href="#methods">
+                Methods
+            </a>
+
+            <a href="#research">
+                Research Areas
+            </a>
+
+            <a href="#progress">
+                Research Progress
+            </a>
+
+            <a href="#dissemination">
+                Dissemination
+            </a>
+
+            <a href="#development">
+                Researcher Development
+            </a>
+
+            <a href="#vision">
+                Future Direction
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="container">
+
+
+        <!-- =========================================
+             INTRO
+        ========================================== -->
+
+        <section class="section" id="portfolio">
+
+            <div class="intro">
+
+                <p>
+                    My research portfolio is currently in development, with
+                    multiple projects advancing toward manuscript preparation
+                    and submission to peer-reviewed journals. Although I am at
+                    an early stage of my publication journey, my primary
+                    emphasis is on conducting methodologically sound, ethically
+                    responsible, and policy-relevant research that addresses
+                    key public health challenges in Bangladesh and other
+                    low- and middle-income countries.
+                </p>
+
+                <p>
+                    My ongoing research spans HPV vaccination and vaccine
+                    hesitancy, adolescent health, maternal and child health,
+                    climate change and health, and humanitarian health.
+                    Through these studies, I am gaining experience in research
+                    design, quantitative and qualitative data collection,
+                    statistical analysis, interpretation of results, scientific
+                    writing, and dissemination of findings.
+                </p>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="status-grid">
+
+                <div class="status-card">
+
+                    <div class="status-number">
+                        01
+                    </div>
+
+                    <div class="status-label">
+                        Manuscript in Preparation
+                    </div>
+
+                </div>
+
+
+                <div class="status-card">
+
+                    <div class="status-number">
+                        05+
+                    </div>
+
+                    <div class="status-label">
+                        Core Research Themes
+                    </div>
+
+                </div>
+
+
+                <div class="status-card">
+
+                    <div class="status-number">
+                        LMIC
+                    </div>
+
+                    <div class="status-label">
+                        Primary Research Context
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MANUSCRIPT
+        ========================================== -->
+
+        <section class="section" id="manuscript">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    01 — Manuscripts in Preparation
+                </div>
+
+                <h2>
+                    Current Research Output
+                </h2>
+
+            </div>
+
+
+            <div class="manuscript">
+
+                <div class="manuscript-header">
+
+                    <div class="manuscript-status">
+                        Manuscript in Preparation
+                    </div>
+
+                    <h3>
+                        HPV Vaccination Hesitancy Among Adolescent Girls in
+                        Rural and Urban School Settings in Bangladesh
+                    </h3>
+
+                    <p>
+                        Investigating determinants of HPV vaccine hesitancy,
+                        vaccine perceptions, and factors influencing acceptance.
+                    </p>
+
+                </div>
+
+
+                <div class="manuscript-body">
+
+                    <h3>
+                        Research Focus
+                    </h3>
+
+                    <div class="research-focus">
+
+                        <span class="focus-tag">
+                            HPV Vaccination
+                        </span>
+
+                        <span class="focus-tag">
+                            Vaccine Hesitancy
+                        </span>
+
+                        <span class="focus-tag">
+                            Adolescent Health
+                        </span>
+
+                        <span class="focus-tag">
+                            Cervical Cancer Prevention
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        This study investigates the prevalence and determinants
+                        of HPV vaccine hesitancy among adolescent girls in
+                        Bangladesh. It explores awareness and perceptions of
+                        HPV infection and vaccination, individual and contextual
+                        factors influencing vaccine acceptance, parental and
+                        social influences, and concerns specific to vaccination.
+                    </p>
+
+
+                    <div class="two-column">
+
+                        <div class="info-box">
+
+                            <h3>
+                                Study Design
+                            </h3>
+
+                            <p>
+                                A mixed-methods design combining quantitative
+                                survey data with qualitative insights to provide
+                                both measurable evidence and deeper understanding
+                                of the experiences and perceptions shaping
+                                vaccine hesitancy.
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-box">
+
+                            <h3>
+                                Current Status
+                            </h3>
+
+                            <p>
+                                Manuscript in preparation, with ongoing work
+                                focused on analysis, interpretation, scientific
+                                writing, and preparation for peer-reviewed
+                                journal submission.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 style="margin-top:35px;">
+                        Expected Contribution
+                    </h3>
+
+                    <p>
+                        The findings are intended to inform more effective HPV
+                        vaccination communication strategies, strengthen
+                        school-based vaccination programs, enhance community
+                        engagement, and support policy development for cervical
+                        cancer prevention in Bangladesh.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             METHODS
+        ========================================== -->
+
+        <section class="section" id="methods">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    02 — Research Methods
+                </div>
+
+                <h2>
+                    Building Methodological Capacity
+                </h2>
+
+            </div>
+
+            <p>
+                My research projects are strengthening my experience across
+                different stages of the research process, from study design
+                and data collection to analysis, interpretation, scientific
+                writing, and dissemination.
+            </p>
+
+
+            <div class="methods">
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        🧭
+                    </div>
+
+                    <strong>
+                        Research Design
+                    </strong>
+
+                    <span>
+                        Study planning
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        📋
+                    </div>
+
+                    <strong>
+                        Data Collection
+                    </strong>
+
+                    <span>
+                        Quantitative &amp; qualitative
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        📊
+                    </div>
+
+                    <strong>
+                        Statistical Analysis
+                    </strong>
+
+                    <span>
+                        Quantitative methods
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        🎙️
+                    </div>
+
+                    <strong>
+                        Qualitative Analysis
+                    </strong>
+
+                    <span>
+                        Context &amp; perceptions
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        🔎
+                    </div>
+
+                    <strong>
+                        Interpretation
+                    </strong>
+
+                    <span>
+                        Evidence synthesis
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        ✍️
+                    </div>
+
+                    <strong>
+                        Scientific Writing
+                    </strong>
+
+                    <span>
+                        Manuscript development
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        ⚖️
+                    </div>
+
+                    <strong>
+                        Critical Appraisal
+                    </strong>
+
+                    <span>
+                        Evidence assessment
+                    </span>
+
+                </div>
+
+
+                <div class="method">
+
+                    <div class="method-icon">
+                        📢
+                    </div>
+
+                    <strong>
+                        Dissemination
+                    </strong>
+
+                    <span>
+                        Research translation
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESEARCH IN PROGRESS
+        ========================================== -->
+
+        <section class="section" id="research">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    03 — Research in Progress
+                </div>
+
+                <h2>
+                    Developing a Broader Research Agenda
+                </h2>
+
+            </div>
+
+            <p>
+                In addition to my current manuscript, I am working toward
+                developing a broader research agenda that links vaccination,
+                adolescent health, maternal and child health, climate change,
+                and health-system resilience.
+            </p>
+
+            <div class="research-grid">
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        💉
+                    </div>
+
+                    <h3>
+                        HPV Vaccine Confidence
+                    </h3>
+
+                    <p>
+                        Assessing interventions to improve HPV vaccine confidence
+                        and uptake.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Behavioral Determinants
+                    </h3>
+
+                    <p>
+                        Examining behavioral and social determinants of
+                        vaccination.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        🌡️
+                    </div>
+
+                    <h3>
+                        Climate &amp; Maternal Health
+                    </h3>
+
+                    <p>
+                        Investigating climate-related risks to maternal and
+                        reproductive health.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        👶
+                    </div>
+
+                    <h3>
+                        Climate &amp; Child Health
+                    </h3>
+
+                    <p>
+                        Exploring the impact of climate change on child health
+                        and nutrition.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Climate-Resilient Health Systems
+                    </h3>
+
+                    <p>
+                        Developing approaches to strengthen climate-resilient
+                        maternal and child health systems.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Vulnerable Populations
+                    </h3>
+
+                    <p>
+                        Strengthening health systems for displaced and
+                        vulnerable populations.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Implementation Science
+                    </h3>
+
+                    <p>
+                        Evaluating implementation strategies for evidence-based
+                        public health interventions.
+                    </p>
+
+                </div>
+
+
+                <div class="research-card">
+
+                    <div class="research-icon">
+                        ⚖️
+                    </div>
+
+                    <h3>
+                        Health Equity
+                    </h3>
+
+                    <p>
+                        Exploring how social and health-system factors influence
+                        equitable access to essential services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESEARCH PIPELINE
+        ========================================== -->
+
+        <section class="section" id="progress">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    04 — Research Development
+                </div>
+
+                <h2>
+                    From Research Question to Impact
+                </h2>
+
+            </div>
+
+            <p>
+                My approach to research emphasizes a continuous pathway from
+                identifying meaningful public health problems to generating
+                evidence and translating findings into practical recommendations.
+            </p>
+
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        1
+                    </div>
+
+                    <strong>
+                        Research Question
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        2
+                    </div>
+
+                    <strong>
+                        Study Design
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        3
+                    </div>
+
+                    <strong>
+                        Data Collection
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        4
+                    </div>
+
+                    <strong>
+                        Analysis
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        5
+                    </div>
+
+                    <strong>
+                        Manuscript
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        6
+                    </div>
+
+                    <strong>
+                        Dissemination
+                    </strong>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        7
+                    </div>
+
+                    <strong>
+                        Policy &amp; Practice
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             DISSEMINATION
+        ========================================== -->
+
+        <section class="section" id="dissemination">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    05 — Knowledge Translation
+                </div>
+
+                <h2>
+                    Research Dissemination
+                </h2>
+
+            </div>
+
+            <p>
+                I am dedicated to sharing research findings through peer-reviewed
+                journal publications, scientific conferences, academic
+                presentations, policy briefs, and professional engagement
+                platforms.
+            </p>
+
+            <p>
+                My objective is not only to contribute to scholarly literature
+                but also to ensure that evidence is accessible and useful to
+                policymakers, healthcare providers, communities, and organizations
+                involved in public health implementation.
+            </p>
+
+
+            <div class="dissemination-grid">
+
+                <div class="dissemination">
+
+                    <div class="dissemination-icon">
+                        📄
+                    </div>
+
+                    <strong>
+                        Peer-Reviewed Journals
+                    </strong>
+
+                </div>
+
+
+                <div class="dissemination">
+
+                    <div class="dissemination-icon">
+                        🎤
+                    </div>
+
+                    <strong>
+                        Scientific Conferences
+                    </strong>
+
+                </div>
+
+
+                <div class="dissemination">
+
+                    <div class="dissemination-icon">
+                        🖥️
+                    </div>
+
+                    <strong>
+                        Academic Presentations
+                    </strong>
+
+                </div>
+
+
+                <div class="dissemination">
+
+                    <div class="dissemination-icon">
+                        📑
+                    </div>
+
+                    <strong>
+                        Policy Briefs
+                    </strong>
+
+                </div>
+
+
+                <div class="dissemination">
+
+                    <div class="dissemination-icon">
+                        🤝
+                    </div>
+
+                    <strong>
+                        Professional Engagement
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INDEPENDENT RESEARCHER
+        ========================================== -->
+
+        <section class="section" id="development">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    06 — Researcher Development
+                </div>
+
+                <h2>
+                    Developing as an Independent Researcher
+                </h2>
+
+            </div>
+
+            <div class="development">
+
+                <h3>
+                    From Public Health Practitioner to Researcher
+                </h3>
+
+                <p>
+                    My current manuscript-stage work represents a key step in my
+                    transition from public health practitioner to independent
+                    researcher. Through these projects, I am strengthening
+                    essential doctoral-level competencies across the research
+                    lifecycle.
+                </p>
+
+            </div>
+
+
+            <div class="competencies">
+
+                <div class="competency">
+                    <span>
+                        Research question development
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Study design
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Data analysis
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Scientific writing
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Critical appraisal of evidence
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Evidence interpretation
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Research dissemination
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Knowledge translation
+                    </span>
+                </div>
+
+                <div class="competency">
+                    <span>
+                        Public health recommendations
+                    </span>
+                </div>
+
+            </div>
+
+
+            <p style="margin-top:30px;">
+                I recognize that building a strong publication record is a
+                gradual process. Therefore, my focus is on producing high-quality,
+                reproducible, and impactful research, rather than prioritizing
+                publication quantity.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             RESEARCH VALUES
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="values">
+
+                <h2>
+                    Principles Guiding My Research
+                </h2>
+
+                <p>
+                    The development of my research portfolio is guided by a
+                    commitment to scientific rigor, ethical responsibility,
+                    reproducibility, and meaningful public health impact.
+                </p>
+
+
+                <div class="value-grid">
+
+                    <div class="value">
+
+                        <div class="value-icon">
+                            🔬
+                        </div>
+
+                        <strong>
+                            Methodological Rigor
+                        </strong>
+
+                    </div>
+
+
+                    <div class="value">
+
+                        <div class="value-icon">
+                            ⚖️
+                        </div>
+
+                        <strong>
+                            Ethical Responsibility
+                        </strong>
+
+                    </div>
+
+
+                    <div class="value">
+
+                        <div class="value-icon">
+                            🔁
+                        </div>
+
+                        <strong>
+                            Reproducibility
+                        </strong>
+
+                    </div>
+
+
+                    <div class="value">
+
+                        <div class="value-icon">
+                            🌍
+                        </div>
+
+                        <strong>
+                            Public Health Impact
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             FUTURE DIRECTION
+        ========================================== -->
+
+        <section class="section" id="vision">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    07 — Future Research Direction
+                </div>
+
+                <h2>
+                    Preparing for Doctoral Research
+                </h2>
+
+            </div>
+
+            <div class="vision">
+
+                <p>
+                    As I move toward doctoral training, I aim to expand my
+                    research collaborations and contribute to the growing
+                    evidence base on HPV vaccination, health equity, maternal
+                    and child health, climate change and health, and humanitarian
+                    health systems.
+                </p>
+
+                <p>
+                    I hope to build on my current research experience through
+                    advanced training in epidemiology, implementation science,
+                    behavioral science, health systems research, and climate
+                    and health.
+                </p>
+
+                <p>
+                    My long-term goal is to develop an independent research
+                    career that connects rigorous scientific investigation with
+                    public health policy and implementation. I aim to contribute
+                    evidence that is relevant to communities, useful to
+                    policymakers, and capable of informing interventions that
+                    improve health outcomes and equity.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CLOSING
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="intro">
+
+                <p>
+                    My research portfolio is still developing, but each project
+                    represents an important step toward becoming an independent
+                    public health researcher. I am committed to building a
+                    research career grounded in rigorous methods, ethical
+                    practice, collaboration, and meaningful contribution to
+                    public health.
+                </p>
+
+                <p>
+                    Ultimately, I hope my research will move beyond publication
+                    to contribute to better decisions, stronger health systems,
+                    and measurable improvements in the health and well-being of
+                    vulnerable populations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <strong>
+            Research Outputs
+        </strong>
+
+        Building Evidence for Better Public Health
+
+    </footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- Footer Start -->
+    
+
+<div id="footer"></div>
+
+<script>
+ // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+ fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+	<!-- Footer End -->

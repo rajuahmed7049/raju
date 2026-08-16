@@ -1,0 +1,2109 @@
+<!-- Header Start-->
+<div id="header"></div>
+<!-- Header end -->
+    
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Humanitarian & Refugee Health | Public Health</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.8;
+            color: #263238;
+            background: #f5f8fa;
+        }
+
+        /* =========================================
+           HERO
+        ========================================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 57, 77, 0.98),
+                    rgba(13, 105, 112, 0.95)
+                );
+            color: white;
+            padding: 95px 20px 90px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 50%;
+            left: -180px;
+            top: -200px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 50%;
+            right: -230px;
+            bottom: -300px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 700;
+			color: white;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(19px, 2.5vw, 25px);
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: auto;
+            color: rgba(255,255,255,0.78);
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================== */
+
+        .section-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #dfe8eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px 15px;
+            overflow-x: auto;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #455a64;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: 0.25s ease;
+        }
+
+        .nav-container a:hover {
+            background: #e5f4f5;
+            color: #087f8c;
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================== */
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+        ========================================== */
+
+        .intro {
+            background: #ffffff;
+            padding: 38px 42px;
+            border-radius: 18px;
+            margin-bottom: 70px;
+            border-left: 5px solid #0b7d8b;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .intro p {
+            color: #455a64;
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           SECTIONS
+        ========================================== */
+
+        .section {
+            margin-bottom: 75px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            color: #0b8793;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section h2 {
+            color: #123b50;
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+
+        .section h3 {
+            color: #155e75;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #455a64;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           HUMANITARIAN STATISTICS / HIGHLIGHTS
+        ========================================== */
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .highlight {
+            background: white;
+            border: 1px solid #e0eaed;
+            border-radius: 15px;
+            padding: 25px 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.035);
+        }
+
+        .highlight-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .highlight strong {
+            display: block;
+            color: #123b50;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .highlight span {
+            color: #607d8b;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           CARDS
+        ========================================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e1eaed;
+            border-radius: 16px;
+            padding: 29px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.04);
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+            border-color: #c8e2e5;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e6f5f6;
+            border-radius: 13px;
+            color: #087f8c;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #123b50;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           QUOTE BOX
+        ========================================== */
+
+        .quote-box {
+            background: linear-gradient(
+                135deg,
+                #e8f6f7,
+                #f6fbfc
+            );
+            border-left: 5px solid #0b8793;
+            border-radius: 14px;
+            padding: 30px 35px;
+            margin: 30px 0;
+        }
+
+        .quote-box p {
+            color: #174b5c;
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 500;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           HUMANITARIAN FEATURE
+        ========================================== */
+
+        .humanitarian-box {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b50,
+                    #176d77
+                );
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .humanitarian-box::after {
+            content: "✦";
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 120px;
+            color: rgba(255,255,255,0.06);
+        }
+
+        .humanitarian-box h2,
+        .humanitarian-box h3 {
+            color: white;
+        }
+
+        .humanitarian-box p {
+            color: rgba(255,255,255,0.88);
+        }
+
+
+        /* =========================================
+           RESEARCH QUESTIONS
+        ========================================== */
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .question {
+            background: white;
+            border: 1px solid #e1eaed;
+            border-radius: 14px;
+            padding: 25px;
+            position: relative;
+            padding-left: 58px;
+        }
+
+        .question-number {
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #e5f4f5;
+            color: #087f8c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .question p {
+            margin: 0;
+            color: #455a64;
+            font-size: 15px;
+        }
+
+
+        /* =========================================
+           TAGS
+        ========================================== */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tag {
+            background: #e7f4f5;
+            color: #12616d;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           JOURNEY TIMELINE
+        ========================================== */
+
+        .journey {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 35px;
+        }
+
+        .journey::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #c8dfe3;
+        }
+
+        .journey-item {
+            position: relative;
+            margin-bottom: 38px;
+        }
+
+        .journey-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .journey-item::before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 8px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #0b7d8b;
+            border: 3px solid #e4f4f5;
+        }
+
+        .journey-item h3 {
+            color: #123b50;
+            margin: 0 0 8px;
+        }
+
+
+        /* =========================================
+           PRINCIPLES
+        ========================================== */
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .principle {
+            background: white;
+            border: 1px solid #e1eaed;
+            border-radius: 15px;
+            padding: 25px 18px;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        .principle:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        .principle-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .principle h3 {
+            color: #123b50;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .principle p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           FINAL VISION
+        ========================================== */
+
+        .vision {
+            background: #123b50;
+            color: white;
+            padding: 48px;
+            border-radius: 21px;
+            margin-top: 30px;
+        }
+
+        .vision h2 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .vision p {
+            color: rgba(255,255,255,0.87);
+            font-size: 17px;
+        }
+
+        .vision p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           CLOSING COMMITMENT
+        ========================================== */
+
+        .commitment {
+            background: #ffffff;
+            border: 1px solid #dce7ea;
+            border-left: 5px solid #0b7d8b;
+            padding: 38px;
+            border-radius: 17px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.04);
+        }
+
+        .commitment h2 {
+            color: #123b50;
+            margin-bottom: 17px;
+        }
+
+        .commitment p {
+            margin-bottom: 15px;
+        }
+
+        .commitment p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+            background: #0c2d3c;
+            color: rgba(255,255,255,0.68);
+            text-align: center;
+            padding: 38px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            display: block;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 1000px) {
+
+            .principles {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .highlight-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .container {
+                padding: 45px 18px;
+            }
+
+            .intro {
+                padding: 27px;
+            }
+
+            .cards,
+            .question-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principles {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlight-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .humanitarian-box,
+            .vision {
+                padding: 30px 25px;
+            }
+
+            .quote-box {
+                padding: 25px;
+            }
+
+            .quote-box p {
+                font-size: 18px;
+            }
+
+            .nav-container {
+                justify-content: flex-start;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .highlight-grid,
+            .principles {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .hero-subtitle {
+                font-size: 19px;
+            }
+
+            .commitment {
+                padding: 28px 24px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Humanitarian &amp; Global Health
+            </div>
+
+            <h1>
+                Humanitarian &amp; Refugee Health
+            </h1>
+
+            <div class="hero-subtitle">
+                Working at the Intersection of Health,
+                Vulnerability, and Resilience
+            </div>
+
+            <p class="hero-description">
+                Exploring health equity, humanitarian health, resilient
+                health systems, and evidence-based interventions for
+                vulnerable populations.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="section-nav">
+
+        <div class="nav-container">
+
+            <a href="#refugee">
+                Refugee &amp; Host Health
+            </a>
+
+            <a href="#maternal">
+                Maternal &amp; Adolescent
+            </a>
+
+            <a href="#vaccination">
+                Vaccination
+            </a>
+
+            <a href="#surveillance">
+                Surveillance
+            </a>
+
+            <a href="#coordination">
+                Coordination
+            </a>
+
+            <a href="#resources">
+                Resource Constraints
+            </a>
+
+            <a href="#climate">
+                Climate &amp; Health
+            </a>
+
+            <a href="#research">
+                Research
+            </a>
+
+            <a href="#principles">
+                Lessons
+            </a>
+
+            <a href="#future">
+                Future Research
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="container">
+
+
+        <!-- =========================================
+             INTRODUCTION
+        ========================================== -->
+
+        <div class="intro">
+
+            <p>
+                My experience in Cox's Bazar, Bangladesh, has been a defining
+                part of my professional development as a physician and public
+                health practitioner. Working in a complex humanitarian setting
+                that serves both the Rohingya refugee population and the
+                surrounding host community has provided me with firsthand
+                experience of how displacement, poverty, gender, environmental
+                vulnerability, limited resources, and health-system constraints
+                interact to shape population health.
+            </p>
+
+            <p>
+                This experience has strengthened my commitment to health equity,
+                humanitarian health, resilient health systems, and evidence-based
+                interventions for vulnerable populations. More importantly, it
+                has influenced the questions I seek to answer through public
+                health research and my aspiration to pursue doctoral training.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             EXPERIENCE HIGHLIGHTS
+        ========================================== -->
+
+        <div class="highlight-grid">
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🏘️
+                </div>
+
+                <strong>
+                    Community Health
+                </strong>
+
+                <span>
+                    Refugee &amp; host communities
+                </span>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🏥
+                </div>
+
+                <strong>
+                    Health Systems
+                </strong>
+
+                <span>
+                    Coordination &amp; resilience
+                </span>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    💉
+                </div>
+
+                <strong>
+                    Disease Prevention
+                </strong>
+
+                <span>
+                    Vaccination &amp; surveillance
+                </span>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    🌍
+                </div>
+
+                <strong>
+                    Global Health
+                </strong>
+
+                <span>
+                    Equity &amp; humanitarian health
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             REFUGEE & HOST COMMUNITY
+        ========================================== -->
+
+        <section class="section" id="refugee">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    01 — Population Health
+                </div>
+
+                <h2>
+                    Rohingya Refugee &amp; Host-Community Health
+                </h2>
+
+            </div>
+
+            <p>
+                Working within the health system in Cox's Bazar has exposed me
+                to the complex healthcare needs of displaced populations
+                alongside those of the host community. The coexistence of
+                humanitarian and routine health needs requires coordinated
+                approaches that address immediate health priorities while
+                strengthening sustainable healthcare delivery.
+            </p>
+
+            <p>
+                My professional experience has involved supporting health
+                services and public health activities related to maternal and
+                child health, adolescent and reproductive health, vaccination,
+                disease prevention, surveillance, health education, community
+                engagement, and health-system coordination.
+            </p>
+
+            <div class="quote-box">
+
+                <p>
+                    Humanitarian health cannot be separated from broader
+                    questions of health systems, equity, social determinants,
+                    and long-term resilience.
+                </p>
+
+            </div>
+
+            <p>
+                This setting has strengthened my understanding that humanitarian
+                health requires both immediate responses to urgent needs and
+                longer-term approaches to sustainable and equitable healthcare
+                delivery.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             MATERNAL / REPRODUCTIVE / ADOLESCENT
+        ========================================== -->
+
+        <section class="section" id="maternal">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    02 — Women &amp; Adolescents
+                </div>
+
+                <h2>
+                    Maternal, Reproductive &amp; Adolescent Health
+                </h2>
+
+            </div>
+
+            <p>
+                Women and adolescents in humanitarian settings often face
+                multiple barriers to accessing timely and appropriate
+                healthcare. My work has therefore included engagement with
+                maternal, reproductive, and adolescent health programs, with
+                particular attention to improving access to preventive and
+                essential health services.
+            </p>
+
+            <p>
+                These experiences have strengthened my interest in understanding
+                how healthcare systems can better respond to the needs of women
+                and adolescents affected by displacement and vulnerability.
+            </p>
+
+            <div class="tags">
+
+                <span class="tag">
+                    Adolescent Reproductive Health
+                </span>
+
+                <span class="tag">
+                    Maternal Health
+                </span>
+
+                <span class="tag">
+                    HPV Vaccination
+                </span>
+
+                <span class="tag">
+                    Cervical Cancer Prevention
+                </span>
+
+                <span class="tag">
+                    Sexual &amp; Reproductive Health
+                </span>
+
+                <span class="tag">
+                    Health Education
+                </span>
+
+                <span class="tag">
+                    Community Engagement
+                </span>
+
+                <span class="tag">
+                    Gender &amp; Health Equity
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             VACCINATION
+        ========================================== -->
+
+        <section class="section" id="vaccination">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    03 — Disease Prevention
+                </div>
+
+                <h2>
+                    Vaccination &amp; Disease Prevention
+                </h2>
+
+            </div>
+
+            <p>
+                Vaccination is an important component of humanitarian health,
+                where population displacement, overcrowding, mobility,
+                misinformation, and barriers to healthcare access can increase
+                vulnerability to vaccine-preventable diseases.
+            </p>
+
+            <p>
+                Through my professional work, I have gained practical insight
+                into the importance of immunization, health communication,
+                community engagement, surveillance, and coordination in
+                supporting disease prevention.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💉
+                    </div>
+
+                    <h3>
+                        Immunization
+                    </h3>
+
+                    <p>
+                        Understanding vaccination as an essential population-level
+                        strategy for preventing disease and promoting health equity.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📢
+                    </div>
+
+                    <h3>
+                        Health Communication
+                    </h3>
+
+                    <p>
+                        Recognizing the importance of clear, trusted, and
+                        context-sensitive communication in vaccination programs.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Community Engagement
+                    </h3>
+
+                    <p>
+                        Working with communities and stakeholders to improve
+                        awareness, trust, and preventive health practices.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Vaccine Hesitancy
+                    </h3>
+
+                    <p>
+                        Exploring how perceptions, parental influence, social
+                        norms, trust, and health-system factors affect acceptance.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                These experiences have strengthened my interest in vaccination
+                research, particularly HPV vaccine hesitancy among adolescents.
+                I am interested in understanding how individual perceptions,
+                parental influence, social norms, communication, trust, and
+                health-system factors affect vaccine acceptance in different
+                populations.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             SURVEILLANCE
+        ========================================== -->
+
+        <section class="section" id="surveillance">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    04 — Public Health Response
+                </div>
+
+                <h2>
+                    Disease Surveillance &amp; Outbreak Preparedness
+                </h2>
+
+            </div>
+
+            <p>
+                Humanitarian settings require strong surveillance and rapid
+                response capacity because infectious disease risks can evolve
+                quickly in populations experiencing displacement and constrained
+                living conditions.
+            </p>
+
+            <p>
+                My professional experience has included engagement with disease
+                surveillance, outbreak preparedness, prevention activities,
+                health-system coordination, and public health response.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📡
+                    </div>
+
+                    <h3>
+                        Early Detection
+                    </h3>
+
+                    <p>
+                        Recognizing the importance of timely surveillance and
+                        detection of emerging public health threats.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🚨
+                    </div>
+
+                    <h3>
+                        Outbreak Preparedness
+                    </h3>
+
+                    <p>
+                        Supporting preparedness and coordinated response to
+                        public health emergencies.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📣
+                    </div>
+
+                    <h3>
+                        Timely Communication
+                    </h3>
+
+                    <p>
+                        Understanding the importance of rapid information sharing
+                        and coordinated decision-making.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        Community Participation
+                    </h3>
+
+                    <p>
+                        Recognizing communities as essential partners in
+                        effective surveillance and emergency response.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                Working in this environment has strengthened my interest in
+                health systems research and in understanding how surveillance
+                and response systems can become more resilient, integrated,
+                and responsive to vulnerable populations.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             COORDINATION
+        ========================================== -->
+
+        <section class="section" id="coordination">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    05 — Collaboration
+                </div>
+
+                <h2>
+                    Coordination &amp; Multidisciplinary Collaboration
+                </h2>
+
+            </div>
+
+            <p>
+                Humanitarian health requires collaboration across multiple
+                sectors and institutions. My work has involved coordination with
+                healthcare providers, government stakeholders, community
+                representatives, and partner organizations, contributing to the
+                delivery and coordination of health programs in a complex
+                operational environment.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Multidisciplinary Teamwork
+                    </h3>
+
+                    <p>
+                        Collaborating with professionals from different
+                        disciplines to address complex health challenges.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🔗
+                    </div>
+
+                    <h3>
+                        Stakeholder Coordination
+                    </h3>
+
+                    <p>
+                        Supporting communication and coordination among
+                        government, communities, providers, and partners.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Program Implementation
+                    </h3>
+
+                    <p>
+                        Translating health priorities and policies into practical
+                        activities and services.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧩
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Addressing operational and implementation challenges in
+                        resource-constrained environments.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="skills" style="margin-top:30px;">
+
+                <span class="tag">
+                    Health-Service Planning
+                </span>
+
+                <span class="tag">
+                    Community Engagement
+                </span>
+
+                <span class="tag">
+                    Health Communication
+                </span>
+
+                <span class="tag">
+                    Program Implementation
+                </span>
+
+                <span class="tag">
+                    Stakeholder Coordination
+                </span>
+
+                <span class="tag">
+                    Policy Translation
+                </span>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                It has also taught me that sustainable public health
+                interventions depend on collaboration between communities,
+                health professionals, policymakers, and implementing
+                organizations.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             RESOURCE CONSTRAINTS
+        ========================================== -->
+
+        <section class="section" id="resources">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    06 — Health-System Resilience
+                </div>
+
+                <h2>
+                    Understanding Health in Resource-Constrained Settings
+                </h2>
+
+            </div>
+
+            <p>
+                Working in a humanitarian environment has given me a practical
+                understanding of the challenges involved in delivering quality
+                healthcare when resources, infrastructure, workforce capacity,
+                and access may be constrained.
+            </p>
+
+            <p>
+                These challenges have encouraged me to think beyond individual
+                interventions and consider broader questions about health-system
+                resilience, equitable access, intervention adaptation, and
+                sustainable healthcare delivery.
+            </p>
+
+            <div class="question-grid">
+
+                <div class="question">
+
+                    <div class="question-number">
+                        1
+                    </div>
+
+                    <p>
+                        How can health systems remain resilient during population
+                        displacement?
+                    </p>
+
+                </div>
+
+
+                <div class="question">
+
+                    <div class="question-number">
+                        2
+                    </div>
+
+                    <p>
+                        How can preventive services reach populations facing
+                        multiple barriers?
+                    </p>
+
+                </div>
+
+
+                <div class="question">
+
+                    <div class="question-number">
+                        3
+                    </div>
+
+                    <p>
+                        How can evidence-based interventions be adapted to local
+                        social and cultural contexts?
+                    </p>
+
+                </div>
+
+
+                <div class="question">
+
+                    <div class="question-number">
+                        4
+                    </div>
+
+                    <p>
+                        How can humanitarian health programs contribute to
+                        sustainable health-system strengthening?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                These questions increasingly shape my research interests and
+                future academic direction.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             CLIMATE & HEALTH
+        ========================================== -->
+
+        <section class="section" id="climate">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    07 — Environmental Health
+                </div>
+
+                <h2>
+                    Climate, Environment &amp; Humanitarian Health
+                </h2>
+
+            </div>
+
+            <p>
+                My humanitarian experience has also strengthened my interest in
+                the relationship between climate change, environmental
+                vulnerability, displacement, and health. Bangladesh is highly
+                exposed to climate-related hazards, and vulnerable populations
+                may experience disproportionate health consequences.
+            </p>
+
+            <p>
+                I am particularly interested in examining how climate-related
+                risks interact with displacement and existing health inequalities
+                to influence population health.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🤰
+                    </div>
+
+                    <h3>
+                        Maternal &amp; Reproductive Health
+                    </h3>
+
+                    <p>
+                        Understanding how environmental and humanitarian
+                        vulnerabilities affect women and reproductive health.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        👶
+                    </div>
+
+                    <h3>
+                        Child Health
+                    </h3>
+
+                    <p>
+                        Exploring climate and displacement-related risks
+                        affecting children and vulnerable families.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🦠
+                    </div>
+
+                    <h3>
+                        Infectious Diseases
+                    </h3>
+
+                    <p>
+                        Examining how environmental conditions and displacement
+                        may influence infectious disease risks.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🥗
+                    </div>
+
+                    <h3>
+                        Nutrition
+                    </h3>
+
+                    <p>
+                        Considering the relationship between vulnerability,
+                        environmental change, displacement, and nutrition.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Mental Health
+                    </h3>
+
+                    <p>
+                        Recognizing psychosocial and mental health dimensions of
+                        displacement and environmental vulnerability.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Health-System Resilience
+                    </h3>
+
+                    <p>
+                        Exploring climate-resilient and sustainable approaches
+                        to healthcare delivery.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             FROM PRACTICE TO RESEARCH
+        ========================================== -->
+
+        <section class="section" id="research">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    08 — Research Perspective
+                </div>
+
+                <h2>
+                    From Humanitarian Practice to Research
+                </h2>
+
+            </div>
+
+            <p>
+                My humanitarian experience has fundamentally influenced the way
+                I think about public health research. Field practice has shown me
+                that health problems are rarely caused by a single factor.
+            </p>
+
+            <p>
+                They emerge from the interaction of individual behavior, social
+                determinants, environmental conditions, health-system capacity,
+                policy, and structural inequality.
+            </p>
+
+            <div class="journey">
+
+                <div class="journey-item">
+
+                    <h3>
+                        Field Observation
+                    </h3>
+
+                    <p>
+                        Direct exposure to complex health challenges affecting
+                        vulnerable populations.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Research Questions
+                    </h3>
+
+                    <p>
+                        Identifying gaps between health needs, policy, program
+                        design, and implementation.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Evidence Generation
+                    </h3>
+
+                    <p>
+                        Applying rigorous research methods to understand
+                        determinants and evaluate interventions.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Translation to Action
+                    </h3>
+
+                    <p>
+                        Using evidence to inform programs, policy, implementation,
+                        and community practice.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="quote-box">
+
+                <p>
+                    I see humanitarian settings not simply as places where health
+                    services are delivered, but also as important environments
+                    for generating research questions and developing innovative,
+                    context-sensitive solutions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LESSONS
+        ========================================== -->
+
+        <section class="section" id="principles">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    09 — Professional Philosophy
+                </div>
+
+                <h2>
+                    Lessons That Shape My Professional Vision
+                </h2>
+
+            </div>
+
+            <p>
+                My humanitarian experience has taught me several principles
+                that guide my professional and research approach.
+            </p>
+
+            <div class="principles">
+
+                <div class="principle">
+
+                    <div class="principle-icon">
+                        ⚖️
+                    </div>
+
+                    <h3>
+                        Health Equity
+                    </h3>
+
+                    <p>
+                        Populations with the greatest health needs often face
+                        the greatest barriers to care.
+                    </p>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Context
+                    </h3>
+
+                    <p>
+                        Interventions must reflect social, cultural,
+                        environmental, and system realities.
+                    </p>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Participation
+                    </h3>
+
+                    <p>
+                        Sustainable interventions require trust, local
+                        ownership, and meaningful engagement.
+                    </p>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Health Systems
+                    </h3>
+
+                    <p>
+                        Lasting impact requires resilient systems capable of
+                        delivering effective interventions.
+                    </p>
+
+                </div>
+
+
+                <div class="principle">
+
+                    <div class="principle-icon">
+                        🔬
+                    </div>
+
+                    <h3>
+                        Action
+                    </h3>
+
+                    <p>
+                        Evidence is most valuable when it improves programs,
+                        policy, and community health.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PREPARING FOR GLOBAL HEALTH RESEARCH
+        ========================================== -->
+
+        <section class="section" id="future">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    10 — Doctoral Direction
+                </div>
+
+                <h2>
+                    Preparing for Global Health Research
+                </h2>
+
+            </div>
+
+            <p>
+                My experience in humanitarian health has prepared me to approach
+                doctoral research with both scientific curiosity and practical
+                understanding. I hope to build on this foundation through
+                advanced training in epidemiology, implementation science,
+                behavioral science, health systems research, and climate and
+                health.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Epidemiology
+                    </h3>
+
+                    <p>
+                        Investigating population-level patterns and determinants
+                        of health among vulnerable populations.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Implementation Science
+                    </h3>
+
+                    <p>
+                        Identifying strategies that enable effective delivery
+                        of evidence-based interventions.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Behavioral Science
+                    </h3>
+
+                    <p>
+                        Understanding behavioral, social, cultural, and
+                        communication influences on health decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Health Systems Research
+                    </h3>
+
+                    <p>
+                        Studying resilience, service delivery, coordination,
+                        access, and system-level barriers.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Climate &amp; Health
+                    </h3>
+
+                    <p>
+                        Exploring climate-related health risks and approaches
+                        to climate-resilient healthcare.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💉
+                    </div>
+
+                    <h3>
+                        Preventive Health
+                    </h3>
+
+                    <p>
+                        Investigating interventions that improve vaccination,
+                        maternal and child health, and preventive services.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="vision">
+
+                <h2>
+                    Long-Term Global Health Vision
+                </h2>
+
+                <p>
+                    During doctoral training, I aim to investigate interventions
+                    that can improve vaccination uptake, maternal and child
+                    health, adolescent health, and health-system resilience,
+                    particularly among populations experiencing social,
+                    environmental, or humanitarian vulnerability.
+                </p>
+
+                <p>
+                    My long-term goal is to contribute to a global health
+                    research career that connects field experience, rigorous
+                    science, policy, and implementation.
+                </p>
+
+                <p>
+                    I hope to work collaboratively with academic institutions,
+                    governments, communities, and international organizations
+                    to generate evidence that can improve health outcomes and
+                    strengthen resilient health systems in Bangladesh and other
+                    low- and middle-income settings.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMMITMENT
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="commitment">
+
+                <h2>
+                    A Commitment to Vulnerable Populations
+                </h2>
+
+                <p>
+                    My humanitarian health experience has reinforced a commitment
+                    that remains central to my professional identity: public
+                    health research should be accountable to the people and
+                    communities it seeks to serve.
+                </p>
+
+                <p>
+                    The experiences I have gained in Cox's Bazar have not only
+                    strengthened my clinical and public health competencies but
+                    have also shaped the research questions I want to pursue,
+                    the populations I want to serve, and the kind of researcher
+                    I aspire to become.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <strong>
+            Humanitarian &amp; Refugee Health
+        </strong>
+
+        Working at the Intersection of Health, Vulnerability, and Resilience
+
+    </footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- Footer Start -->
+    
+
+<div id="footer"></div>
+
+<script>
+ // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+ fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+	<!-- Footer End -->

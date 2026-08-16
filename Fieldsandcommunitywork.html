@@ -1,0 +1,1855 @@
+<!-- Header Start-->
+<div id="header"></div>
+<!-- Header end -->
+    
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field & Community Work | Public Health</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.8;
+            color: #263238;
+            background: #f5f8fa;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 67, 86, 0.97),
+                    rgba(13, 116, 118, 0.94)
+                );
+            color: white;
+            padding: 95px 20px 90px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            top: -180px;
+            left: -100px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.10);
+            right: -180px;
+            bottom: -250px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 20px;
+			color: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(19px, 2.5vw, 25px);
+            font-weight: 400;
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 850px;
+            margin: auto;
+            color: rgba(255,255,255,0.78);
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .section-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #dfe8eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px 15px;
+            overflow-x: auto;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #455a64;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: all 0.25s ease;
+        }
+
+        .nav-container a:hover {
+            background: #e5f4f5;
+            color: #087f8c;
+        }
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+        ========================================= */
+
+        .intro {
+            background: white;
+            padding: 38px 42px;
+            border-radius: 18px;
+            margin-bottom: 70px;
+            border-left: 5px solid #0b7d8b;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .intro p {
+            font-size: 17px;
+            color: #455a64;
+        }
+
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        .section {
+            margin-bottom: 75px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            color: #0b8793;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section h2 {
+            color: #123b50;
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+
+        .section h3 {
+            color: #155e75;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #455a64;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           HIGHLIGHT QUOTE
+        ========================================= */
+
+        .quote-box {
+            background: linear-gradient(
+                135deg,
+                #e9f7f7,
+                #f6fbfc
+            );
+            border-left: 5px solid #0b8793;
+            padding: 30px 35px;
+            border-radius: 14px;
+            margin: 30px 0;
+        }
+
+        .quote-box p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #174b5c;
+            font-weight: 500;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           CARDS
+        ========================================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e1eaed;
+            border-radius: 16px;
+            padding: 29px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.04);
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+            border-color: #c8e2e5;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e6f5f6;
+            border-radius: 13px;
+            color: #087f8c;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #123b50;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           SKILL TAGS
+        ========================================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            background: #e7f4f5;
+            color: #12616d;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           HUMANITARIAN HIGHLIGHT
+        ========================================= */
+
+        .humanitarian {
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b50,
+                    #176d77
+                );
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .humanitarian::after {
+            content: "✦";
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            font-size: 110px;
+            color: rgba(255,255,255,0.07);
+        }
+
+        .humanitarian h2,
+        .humanitarian h3 {
+            color: white;
+        }
+
+        .humanitarian p {
+            color: rgba(255,255,255,0.87);
+        }
+
+
+        /* =========================================
+           RESEARCH JOURNEY
+        ========================================= */
+
+        .journey {
+            position: relative;
+            margin-top: 40px;
+            padding-left: 40px;
+        }
+
+        .journey::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #c8dfe3;
+        }
+
+        .journey-item {
+            position: relative;
+            margin-bottom: 38px;
+        }
+
+        .journey-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .journey-item::before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 8px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #0b7d8b;
+            border: 3px solid #e4f4f5;
+        }
+
+        .journey-item h3 {
+            margin: 0 0 8px;
+            color: #123b50;
+        }
+
+
+        /* =========================================
+           FIELD ACTIVITY GRID
+        ========================================= */
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .activity {
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #e1eaed;
+            padding: 25px;
+            transition: 0.25s ease;
+        }
+
+        .activity:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+        }
+
+        .activity-number {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0b8793;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .activity h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .activity p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           PHOTO GALLERY PLACEHOLDER
+        ========================================= */
+
+        .gallery-intro {
+            background: #ffffff;
+            border: 1px solid #e0e8eb;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            min-height: 210px;
+            border-radius: 15px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #dcecef,
+                    #eef6f7
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            color: #39707a;
+            border: 1px solid #d4e4e7;
+        }
+
+        .gallery-item strong {
+            display: block;
+            color: #155e75;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        /*
+           Replace each .gallery-item with an image if needed:
+
+           <div class="gallery-item">
+               <img src="images/health-campaign.jpg"
+                    alt="Health campaign">
+           </div>
+        */
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 210px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+
+        /* =========================================
+           ETHICAL COMMITMENT
+        ========================================= */
+
+        .ethics {
+            background: #fffaf0;
+            border: 1px solid #f1dfb7;
+            border-radius: 17px;
+            padding: 35px;
+            position: relative;
+        }
+
+        .ethics-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .ethics-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4e4bc;
+            border-radius: 11px;
+            color: #8a641f;
+            font-size: 20px;
+        }
+
+        .ethics h3 {
+            color: #6e531e;
+            margin: 0;
+        }
+
+        .ethics p {
+            color: #665c48;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           FINAL VISION
+        ========================================= */
+
+        .vision {
+            background: #123b50;
+            color: white;
+            padding: 48px;
+            border-radius: 21px;
+            margin-top: 30px;
+        }
+
+        .vision h2 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .vision p {
+            color: rgba(255,255,255,0.87);
+            font-size: 17px;
+        }
+
+        .vision p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #0c2d3c;
+            color: rgba(255,255,255,0.68);
+            text-align: center;
+            padding: 38px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .activity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .container {
+                padding: 45px 18px;
+            }
+
+            .intro {
+                padding: 27px;
+            }
+
+            .cards,
+            .activity-grid,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .humanitarian,
+            .vision {
+                padding: 30px 25px;
+            }
+
+            .quote-box {
+                padding: 25px;
+            }
+
+            .quote-box p {
+                font-size: 18px;
+            }
+
+            .nav-container {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Professional &amp; Community Experience
+            </div>
+
+            <h1>
+                Field &amp; Community Work
+            </h1>
+
+            <div class="hero-subtitle">
+                Bridging Public Health Research and Community Practice
+            </div>
+
+            <p class="hero-description">
+                Connecting field experience, community engagement,
+                humanitarian health practice, and evidence-based
+                public health research.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="section-nav">
+
+        <div class="nav-container">
+
+            <a href="#community">Community Engagement</a>
+
+            <a href="#campaigns">Health Campaigns</a>
+
+            <a href="#training">Training</a>
+
+            <a href="#programs">Public Health Programs</a>
+
+            <a href="#humanitarian">Humanitarian Health</a>
+
+            <a href="#research">Research Questions</a>
+
+            <a href="#doctoral">Doctoral Research</a>
+
+            <a href="#activities">Field Activities</a>
+
+            <a href="#ethics">Ethical Commitment</a>
+
+            <a href="#impact">Impact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="container">
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="intro">
+
+            <p>
+                My field and community-based work has been an essential part of
+                my development as a public health professional and emerging
+                researcher. Working directly with communities has allowed me to
+                understand how social, cultural, environmental, and health-system
+                factors shape health behaviors and access to essential services.
+                These experiences have strengthened my belief that impactful
+                public health research must remain connected to the realities of
+                the communities it seeks to serve.
+            </p>
+
+            <p>
+                Through my professional and humanitarian health work in Cox's
+                Bazar, Bangladesh, I have engaged with diverse populations,
+                including Rohingya refugees and host communities, and contributed
+                to activities related to maternal and child health, adolescent
+                and reproductive health, vaccination, disease prevention, health
+                education, community engagement, and health-system coordination.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             COMMUNITY ENGAGEMENT
+        ========================================== -->
+
+        <section class="section" id="community">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    01 — Community Practice
+                </div>
+
+                <h2>
+                    Community Engagement
+                </h2>
+
+            </div>
+
+            <p>
+                Meaningful community engagement is central to my approach to
+                public health. I have participated in activities that bring
+                healthcare providers, adolescents, families, community
+                representatives, and other stakeholders together to identify
+                health needs, improve awareness, and strengthen connections
+                between communities and health services.
+            </p>
+
+            <p>
+                These experiences have helped me appreciate the importance of
+                understanding community perceptions, social norms, trust, and
+                local contexts when designing public health interventions.
+            </p>
+
+            <div class="quote-box">
+
+                <p>
+                    "Effective public health interventions must be grounded in
+                    community realities, trust, local knowledge, and cultural
+                    context."
+                </p>
+
+            </div>
+
+            <p>
+                They have also directly informed my research interest in HPV
+                vaccine hesitancy, where community and stakeholder perspectives
+                are essential for understanding vaccination decisions and
+                developing culturally responsive strategies.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             HEALTH CAMPAIGNS
+        ========================================== -->
+
+        <section class="section" id="campaigns">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    02 — Prevention &amp; Promotion
+                </div>
+
+                <h2>
+                    Health Campaigns &amp; Preventive Health
+                </h2>
+
+            </div>
+
+            <p>
+                I have participated in and supported public health activities
+                focused on disease prevention, health promotion, vaccination,
+                and community awareness. These experiences have provided
+                practical insight into the challenges of translating national
+                health priorities into effective interventions at the community
+                level.
+            </p>
+
+            <p>
+                My field experience has particularly strengthened my interest
+                in the implementation of preventive interventions, including HPV
+                vaccination, adolescent health promotion, maternal and child
+                health services, and community-based disease prevention.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💉
+                    </div>
+
+                    <h3>
+                        Vaccination
+                    </h3>
+
+                    <p>
+                        Supporting immunization activities and exploring
+                        community-level factors affecting vaccine awareness,
+                        acceptance, and uptake.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        Health Promotion
+                    </h3>
+
+                    <p>
+                        Supporting preventive health activities designed to
+                        improve health awareness and encourage healthy behaviors.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Disease Prevention
+                    </h3>
+
+                    <p>
+                        Contributing to community-based approaches for reducing
+                        disease risks and strengthening preventive healthcare.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📢
+                    </div>
+
+                    <h3>
+                        Community Awareness
+                    </h3>
+
+                    <p>
+                        Supporting communication and awareness activities that
+                        connect health priorities with community needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             TRAINING
+        ========================================== -->
+
+        <section class="section" id="training">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    03 — Capacity Building
+                </div>
+
+                <h2>
+                    Training &amp; Capacity Building
+                </h2>
+
+            </div>
+
+            <p>
+                I have contributed to health education, professional training,
+                workshops, and capacity-building activities involving healthcare
+                workers, community stakeholders, adolescents, and other relevant
+                groups.
+            </p>
+
+            <p>
+                These activities have strengthened my practical skills in
+                communicating public health information, facilitating
+                collaborative learning, and translating evidence into
+                understandable and actionable messages.
+            </p>
+
+            <div class="skills">
+
+                <span class="skill">
+                    Public Health Communication
+                </span>
+
+                <span class="skill">
+                    Health Education
+                </span>
+
+                <span class="skill">
+                    Stakeholder Engagement
+                </span>
+
+                <span class="skill">
+                    Training &amp; Facilitation
+                </span>
+
+                <span class="skill">
+                    Team Coordination
+                </span>
+
+                <span class="skill">
+                    Knowledge Translation
+                </span>
+
+                <span class="skill">
+                    Community-Centered Design
+                </span>
+
+            </div>
+
+            <div class="quote-box">
+
+                <p>
+                    I view capacity building not simply as the transfer of
+                    information, but as an opportunity to strengthen local
+                    ownership and create sustainable improvements in health
+                    services.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PUBLIC HEALTH PROGRAMS
+        ========================================== -->
+
+        <section class="section" id="programs">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    04 — Collaborative Practice
+                </div>
+
+                <h2>
+                    Public Health Programs &amp; Team-Based Practice
+                </h2>
+
+            </div>
+
+            <p>
+                My field experience has involved working collaboratively with
+                healthcare professionals, government stakeholders, community
+                representatives, and partner organizations.
+            </p>
+
+            <p>
+                Working within multidisciplinary teams has strengthened my
+                understanding of how successful public health programs depend
+                on coordination across different levels of the health system.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Stakeholder Collaboration
+                    </h3>
+
+                    <p>
+                        Working with healthcare professionals, government
+                        counterparts, communities, and partner organizations.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Program Coordination
+                    </h3>
+
+                    <p>
+                        Supporting coordination and implementation of public
+                        health activities across different service levels.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🔗
+                    </div>
+
+                    <h3>
+                        Service Linkage
+                    </h3>
+
+                    <p>
+                        Strengthening connections between communities and
+                        healthcare facilities and services.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧩
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Addressing practical implementation challenges in
+                        resource-constrained environments.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                Through these experiences, I have developed practical skills in
+                program coordination, stakeholder communication, community
+                mobilization, service linkage, health-system collaboration, and
+                problem-solving in resource-constrained environments.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             HUMANITARIAN HEALTH
+        ========================================== -->
+
+        <section class="section" id="humanitarian">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    05 — Humanitarian Practice
+                </div>
+
+                <h2>
+                    Humanitarian Health Experience
+                </h2>
+
+            </div>
+
+            <div class="humanitarian">
+
+                <h2>
+                    Working at the Intersection of Vulnerability,
+                    Health &amp; Resilience
+                </h2>
+
+                <p>
+                    My experience working in a humanitarian setting has been
+                    particularly influential in shaping my research interests.
+                    Delivering and coordinating health services in a context
+                    affected by displacement, vulnerability, environmental
+                    risks, and resource constraints has provided me with
+                    firsthand insight into the complexity of health inequities.
+                </p>
+
+                <p>
+                    These experiences have strengthened my interest in
+                    humanitarian health, refugee health, health-system
+                    resilience, climate-related health risks, and equitable
+                    access to preventive and essential healthcare.
+                </p>
+
+                <p>
+                    They have also motivated me to pursue research that moves
+                    beyond describing health problems toward identifying
+                    interventions that are feasible, scalable, and responsive
+                    to the needs of vulnerable populations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESEARCH QUESTIONS
+        ========================================== -->
+
+        <section class="section" id="research">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    06 — Research Perspective
+                </div>
+
+                <h2>
+                    From Field Experience to Research Questions
+                </h2>
+
+            </div>
+
+            <p>
+                My field experience continually informs the questions I ask as
+                a researcher. Interactions with communities and healthcare
+                providers have helped me recognize gaps between health policy,
+                program design, and implementation.
+            </p>
+
+
+            <div class="journey">
+
+                <div class="journey-item">
+
+                    <h3>
+                        Vaccination &amp; Adolescents
+                    </h3>
+
+                    <p>
+                        My work with adolescents and vaccination-related
+                        activities contributed to my interest in understanding
+                        why evidence-based vaccines may not be accepted even
+                        when they are available.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Trust, Communication &amp; Social Norms
+                    </h3>
+
+                    <p>
+                        I am interested in how communication, trust, social
+                        norms, parental influence, and health-system factors
+                        shape vaccination decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Climate, Displacement &amp; Health
+                    </h3>
+
+                    <p>
+                        Working in a climate-vulnerable and humanitarian setting
+                        has strengthened my interest in understanding how
+                        environmental change, displacement, and health-system
+                        vulnerability interact.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <h3>
+                        Maternal, Child &amp; Reproductive Health
+                    </h3>
+
+                    <p>
+                        These experiences have encouraged me to explore how
+                        environmental and health-system challenges influence
+                        maternal, child, and reproductive health outcomes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quote-box">
+
+                <p>
+                    I view field experience and research as complementary:
+                    field experience generates meaningful research questions,
+                    while rigorous research can provide evidence for improving
+                    field practice and policy.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             DOCTORAL RESEARCH
+        ========================================== -->
+
+        <section class="section" id="doctoral">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    07 — Future Research
+                </div>
+
+                <h2>
+                    A Learning Laboratory for Doctoral Research
+                </h2>
+
+            </div>
+
+            <p>
+                My community and humanitarian experiences have provided an
+                important foundation for my future doctoral work. They have
+                taught me to approach public health challenges from multiple
+                perspectives and to recognize that successful interventions
+                require not only scientific evidence but also community trust,
+                cultural responsiveness, health-system capacity, and effective
+                implementation.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Epidemiology
+                    </h3>
+
+                    <p>
+                        Applying rigorous epidemiological methods to understand
+                        population health patterns and determinants.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Implementation Science
+                    </h3>
+
+                    <p>
+                        Studying how evidence-based interventions can be
+                        effectively implemented in real-world settings.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Behavioral Science
+                    </h3>
+
+                    <p>
+                        Investigating behavioral, social, cultural, and
+                        communication factors affecting health decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Climate &amp; Health
+                    </h3>
+
+                    <p>
+                        Examining how environmental change and vulnerability
+                        influence health outcomes and health-system resilience.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🏥
+                    </div>
+
+                    <h3>
+                        Health Systems Research
+                    </h3>
+
+                    <p>
+                        Understanding system-level barriers and opportunities
+                        for improving healthcare delivery and equity.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💉
+                    </div>
+
+                    <h3>
+                        Vaccination Research
+                    </h3>
+
+                    <p>
+                        Developing and evaluating interventions that improve
+                        vaccine confidence and uptake.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             FIELDWORK THROUGH RESEARCHER'S LENS
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    08 — Professional Journey
+                </div>
+
+                <h2>
+                    Fieldwork Through a Researcher's Lens
+                </h2>
+
+            </div>
+
+            <div class="gallery-intro">
+
+                <p>
+                    The photographs presented in this section document selected
+                    aspects of my professional journey—from health campaigns and
+                    training activities to community engagement, workshops,
+                    conferences, and collaborative public health programs.
+                </p>
+
+                <p>
+                    Each represents an opportunity to learn from communities,
+                    work alongside colleagues, and translate public health
+                    knowledge into practice.
+                </p>
+
+                <p>
+                    For me, fieldwork is not simply an extension of professional
+                    responsibility; it is an important source of learning,
+                    reflection, research questions, and evidence for action.
+                </p>
+
+            </div>
+
+
+            <!--
+                Replace these placeholders with your actual photographs.
+            -->
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Health Campaigns
+                        </strong>
+                        Preventive health and vaccination activities
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Community Engagement
+                        </strong>
+                        Community and stakeholder interaction
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Training &amp; Workshops
+                        </strong>
+                        Capacity-building and health education
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Field Activities
+                        </strong>
+                        Community-based public health practice
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Professional Conferences
+                        </strong>
+                        Knowledge exchange and collaboration
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div>
+                        <strong>
+                            Team-Based Practice
+                        </strong>
+                        Multidisciplinary public health collaboration
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SELECTED FIELD ACTIVITIES
+        ========================================== -->
+
+        <section class="section" id="activities">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    09 — Selected Activities
+                </div>
+
+                <h2>
+                    Selected Field Activities
+                </h2>
+
+            </div>
+
+            <div class="activity-grid">
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Health Campaigns
+                    </h3>
+
+                    <p>
+                        Supporting preventive health and vaccination activities.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Community Engagement
+                    </h3>
+
+                    <p>
+                        Working with communities and stakeholders to improve
+                        awareness, trust, and access to health services.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Training &amp; Workshops
+                    </h3>
+
+                    <p>
+                        Participating in capacity-building and health education
+                        activities.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Maternal, Child &amp; Adolescent Health
+                    </h3>
+
+                    <p>
+                        Supporting programs addressing reproductive, maternal,
+                        child, and adolescent health needs.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Humanitarian Health
+                    </h3>
+
+                    <p>
+                        Contributing to health services and coordination in a
+                        complex humanitarian environment.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        06
+                    </div>
+
+                    <h3>
+                        Professional Conferences
+                    </h3>
+
+                    <p>
+                        Engaging with researchers and public health professionals
+                        to share knowledge and learn from emerging evidence.
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-number">
+                        07
+                    </div>
+
+                    <h3>
+                        Team-Based Practice
+                    </h3>
+
+                    <p>
+                        Collaborating with multidisciplinary teams to address
+                        complex population health challenges.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             ETHICAL COMMITMENT
+        ========================================== -->
+
+        <section class="section" id="ethics">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    10 — Professional Ethics
+                </div>
+
+                <h2>
+                    Ethical Commitment
+                </h2>
+
+            </div>
+
+            <div class="ethics">
+
+                <div class="ethics-title">
+
+                    <div class="ethics-icon">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Respect for Privacy, Dignity &amp; Consent
+                    </h3>
+
+                </div>
+
+                <p>
+                    All photographs and materials presented on this website are
+                    selected with respect for patient confidentiality, informed
+                    consent, dignity, and organizational policies. Identifiable
+                    patient information is not shared without appropriate
+                    authorization.
+                </p>
+
+                <p style="margin-top:15px;">
+                    The purpose of this gallery is to demonstrate professional
+                    learning, collaboration, and public health practice—not to
+                    expose or identify vulnerable individuals.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CONNECTING PRACTICE, RESEARCH & IMPACT
+        ========================================== -->
+
+        <section class="section" id="impact">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    11 — Impact &amp; Future Vision
+                </div>
+
+                <h2>
+                    Connecting Practice, Research &amp; Impact
+                </h2>
+
+            </div>
+
+            <div class="vision">
+
+                <h2>
+                    Research That Ultimately Serves Communities
+                </h2>
+
+                <p>
+                    My field experience has reinforced a central principle of
+                    my professional journey: public health research should
+                    ultimately serve communities.
+                </p>
+
+                <p>
+                    I hope to continue building a career in which clinical
+                    understanding, field experience, rigorous research, and
+                    policy engagement work together to address health inequities.
+                </p>
+
+                <p>
+                    Through doctoral training and future research collaborations,
+                    I aim to transform lessons from the field into scientifically
+                    rigorous evidence and, ultimately, into interventions and
+                    policies that improve health outcomes for women, children,
+                    adolescents, refugees, and other vulnerable populations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CLOSING
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="intro">
+
+                <h2 style="color:#123b50; margin-bottom:18px;">
+                    From Communities to Evidence
+                </h2>
+
+                <p>
+                    My field and community experiences continue to shape how I
+                    understand public health problems, formulate research
+                    questions, and envision meaningful interventions. They have
+                    taught me that strong public health research requires both
+                    scientific rigor and a deep understanding of the people and
+                    systems it seeks to serve.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <strong>
+            Field &amp; Community Work
+        </strong>
+
+        Bridging Public Health Research and Community Practice
+
+    </footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- Footer Start -->
+    
+
+<div id="footer"></div>
+
+<script>
+ // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+ fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+	<!-- Footer End -->

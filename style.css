@@ -1,0 +1,27 @@
+/* Reduce top/bottom padding of the main section */
+.home-awards {
+  padding-top: 30px !important;
+  padding-bottom: 20px !important;
+}
+
+/* Reduce bottom spacing on the title */
+.home-awards .section-title h2 {
+  padding-bottom: 15px !important; /* Overrides Bootstrap pb-5 */
+  margin-bottom: 0 !important;
+}
+
+/* Eliminate bottom space under images */
+.awards-slider .item img {
+  display: block;                  /* Removes natural inline-block gap below images */
+  width: 100%;
+  height: auto;
+  margin-bottom: 0 !important;
+}
+
+/* Clear vertical overflow margins inside slick containers */
+.awards-slider .slick-list,
+.awards-slider .slick-track,
+.awards-slider .slick-slide {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}

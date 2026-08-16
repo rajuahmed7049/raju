@@ -1,0 +1,984 @@
+<!-- Header Start-->
+<div id="header"></div>
+<!-- Header end -->
+    
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinical & Public Health Experience</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.8;
+            color: #263238;
+            background: #f5f8fa;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(8, 61, 92, 0.96), rgba(15, 105, 119, 0.92));
+            color: white;
+            padding: 90px 20px 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+            font-weight: 700;
+			color: #ffffff;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .section-nav {
+            background: white;
+            border-bottom: 1px solid #e0e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            overflow-x: auto;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #455a64;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: 0.25s;
+        }
+
+        .nav-container a:hover {
+            background: #e8f4f6;
+            color: #087f8c;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 35px 40px;
+            border-radius: 16px;
+            margin-bottom: 55px;
+            border-left: 5px solid #0b7d8b;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .intro p {
+            font-size: 17px;
+            color: #455a64;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+            margin-bottom: 70px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-number {
+            color: #0b8793;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            line-height: 1.3;
+            color: #123b50;
+            margin-bottom: 18px;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            color: #155e75;
+            margin: 30px 0 12px;
+        }
+
+        .section p {
+            margin-bottom: 18px;
+            color: #455a64;
+            font-size: 16px;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid #e4eaed;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: #e6f5f6;
+            color: #087f8c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #123b50;
+            font-size: 19px;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* =========================
+           EXPERIENCE HIGHLIGHT
+        ========================= */
+
+        .experience-box {
+            background: linear-gradient(135deg, #ffffff, #f0f8f9);
+            border: 1px solid #d9e8eb;
+            border-radius: 18px;
+            padding: 35px;
+            margin-top: 25px;
+        }
+
+        .role {
+            color: #0b7d8b;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .location {
+            color: #607d8b;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           INTEREST TAGS
+        ========================= */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tag {
+            background: #e8f4f6;
+            color: #12616d;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* =========================
+           RESEARCH JOURNEY
+        ========================= */
+
+        .journey {
+            position: relative;
+            margin-top: 35px;
+            padding-left: 35px;
+        }
+
+        .journey::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #c8dfe3;
+        }
+
+        .journey-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .journey-item::before {
+            content: "";
+            position: absolute;
+            left: -34px;
+            top: 7px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0b7d8b;
+            border: 3px solid #e5f4f5;
+        }
+
+        .journey-item h3 {
+            margin-top: 0;
+        }
+
+        /* =========================
+           FINAL VISION
+        ========================= */
+
+        .vision {
+            background: #123b50;
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 35px;
+        }
+
+        .vision h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .vision p {
+            color: rgba(255,255,255,0.88);
+            font-size: 17px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0d2d3c;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 45px 18px;
+            }
+
+            .intro {
+                padding: 25px;
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-box {
+                padding: 25px;
+            }
+
+            .vision {
+                padding: 30px 25px;
+            }
+
+            .nav-container {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-label">Professional Profile</div>
+
+            <h1>Clinical &amp; Public Health Experience</h1>
+
+            <p>
+                Bridging clinical medicine, public health research,
+                humanitarian practice, and population health.
+            </p>
+        </div>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="section-nav">
+        <div class="nav-container">
+            <a href="#medical">Medical Training</a>
+            <a href="#public-health">Public Health</a>
+            <a href="#experience">Professional Experience</a>
+            <a href="#maternal">Maternal &amp; Child Health</a>
+            <a href="#vaccination">Vaccination</a>
+            <a href="#surveillance">Disease Surveillance</a>
+            <a href="#research">Research Journey</a>
+            <a href="#doctoral">Doctoral Research</a>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <!-- INTRODUCTION -->
+        <div class="intro">
+            <p>
+                My professional journey combines clinical medicine, public health
+                training, research, and humanitarian health practice, providing me
+                with a multidisciplinary perspective on population health. My
+                clinical background has enabled me to understand health problems
+                at the individual level, while my public health training and field
+                experience have strengthened my ability to examine these challenges
+                through epidemiological, health-system, behavioral, and policy
+                perspectives. This combination continues to shape my research
+                interests and my aspiration to pursue doctoral training in public
+                or global health.
+            </p>
+        </div>
+
+
+        <!-- MEDICAL TRAINING -->
+        <section class="section" id="medical">
+
+            <div class="section-header">
+                <div class="section-number">01 — Education</div>
+                <h2>Medical Training</h2>
+            </div>
+
+            <p>
+                I completed my Bachelor of Medicine and Bachelor of Surgery
+                (MBBS) at Sir Salimullah Medical College, Bangladesh, where I
+                developed a strong foundation in clinical medicine, preventive
+                healthcare, and patient-centered care. My clinical training
+                included exposure to medicine, surgery, obstetrics and gynecology,
+                pediatrics, community medicine, and other major clinical
+                disciplines.
+            </p>
+
+            <p>
+                Clinical practice taught me that many health outcomes cannot be
+                addressed through treatment alone. Factors such as socioeconomic
+                conditions, health literacy, vaccination access, gender,
+                environment, health-seeking behavior, and the organization of
+                healthcare services frequently determine whether individuals
+                receive timely and effective care.
+            </p>
+
+            <p>
+                These experiences motivated my transition toward population-based
+                approaches to health and ultimately led me to pursue advanced
+                training in public health.
+            </p>
+
+        </section>
+
+
+        <!-- PUBLIC HEALTH TRAINING -->
+        <section class="section" id="public-health">
+
+            <div class="section-header">
+                <div class="section-number">02 — Advanced Training</div>
+                <h2>Public Health Training</h2>
+            </div>
+
+            <p>
+                I subsequently completed a Master of Public Health (MPH) at the
+                Bangladesh University of Professionals (BUP), strengthening my
+                knowledge and skills in epidemiology, biostatistics, health
+                systems, community health, research methodology, health policy,
+                and program implementation.
+            </p>
+
+            <p>
+                My MPH training broadened my perspective from individual patient
+                care to population health and strengthened my interest in
+                generating evidence to guide public health programs and policies.
+                It also provided a foundation for conducting quantitative and
+                qualitative research and interpreting health data to understand
+                the determinants of disease and health inequities.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Epidemiology &amp; Biostatistics</h3>
+                    <p>
+                        Developing quantitative skills to investigate disease
+                        patterns, determinants, and population-level health
+                        outcomes.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <h3>Health Systems</h3>
+                    <p>
+                        Understanding healthcare delivery, system performance,
+                        access, coordination, and implementation challenges.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Research Methodology</h3>
+                    <p>
+                        Building foundations in quantitative and qualitative
+                        approaches to public health research.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Policy &amp; Programs</h3>
+                    <p>
+                        Exploring how evidence can inform health policies,
+                        programs, implementation, and evaluation.
+                    </p>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 30px;">
+                My academic training has particularly influenced my interest in
+                vaccination, adolescent and reproductive health, maternal and
+                child health, climate change and health, and health systems
+                strengthening.
+            </p>
+
+        </section>
+
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section class="section" id="experience">
+
+            <div class="section-header">
+                <div class="section-number">03 — Field Experience</div>
+                <h2>Professional &amp; Public Health Experience</h2>
+            </div>
+
+            <div class="experience-box">
+
+                <div class="role">
+                    Health Focal — Upazila Health &amp; Family Planning Officer
+                </div>
+
+                <div class="location">
+                    Ukhia Health Complex, Cox's Bazar, Bangladesh
+                </div>
+
+                <p>
+                    I have gained experience at the intersection of clinical care,
+                    public health practice, program coordination, and humanitarian
+                    health. Working in a setting that serves both the host
+                    community and Rohingya refugees has exposed me to complex
+                    health challenges involving limited resources, population
+                    displacement, environmental vulnerability, and inequitable
+                    access to healthcare.
+                </p>
+
+                <p>
+                    My professional responsibilities and public health activities
+                    have included supporting maternal and child health, adolescent
+                    and reproductive health, vaccination and immunization
+                    activities, disease surveillance, outbreak preparedness,
+                    health education, community engagement, and coordination of
+                    health services.
+                </p>
+
+                <p>
+                    I have worked with healthcare providers, community
+                    stakeholders, government counterparts, and partner
+                    organizations to support health programs and improve
+                    coordination between communities and health facilities.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MATERNAL CHILD ADOLESCENT -->
+        <section class="section" id="maternal">
+
+            <div class="section-header">
+                <div class="section-number">04 — Population Health</div>
+                <h2>Maternal, Child &amp; Adolescent Health</h2>
+            </div>
+
+            <p>
+                My clinical and public health responsibilities have strengthened
+                my commitment to improving the health of women, children, and
+                adolescents, particularly populations facing social and
+                structural barriers to healthcare.
+            </p>
+
+            <p>
+                My interests include improving antenatal and reproductive health
+                services, adolescent health education, maternal and child health
+                interventions, immunization, and preventive healthcare.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Maternal Health</span>
+                <span class="tag">Child Health</span>
+                <span class="tag">Adolescent Health</span>
+                <span class="tag">Reproductive Health</span>
+                <span class="tag">Antenatal Care</span>
+                <span class="tag">Preventive Healthcare</span>
+            </div>
+
+        </section>
+
+
+        <!-- VACCINATION -->
+        <section class="section" id="vaccination">
+
+            <div class="section-header">
+                <div class="section-number">05 — Prevention</div>
+                <h2>Vaccination &amp; Preventive Health</h2>
+            </div>
+
+            <p>
+                Vaccination has become a central component of my research and
+                professional interests. My clinical and public health experience
+                has allowed me to observe the importance of immunization not only
+                as a clinical intervention but also as a population-level strategy
+                for disease prevention and health equity.
+            </p>
+
+            <p>
+                This perspective has contributed to my current research interest
+                in HPV vaccination and vaccine hesitancy among adolescent girls in
+                Bangladesh.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">💉</div>
+                    <h3>HPV Vaccination</h3>
+                    <p>
+                        Understanding factors influencing HPV vaccine acceptance
+                        and uptake among adolescent girls in Bangladesh.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Vaccine Hesitancy</h3>
+                    <p>
+                        Examining knowledge, perceptions, social influences,
+                        parental decision-making, and health communication.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👨‍👩‍👧</div>
+                    <h3>Family &amp; Community</h3>
+                    <p>
+                        Exploring the role of parents, communities, social norms,
+                        and trusted information sources in vaccine decisions.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Health Equity</h3>
+                    <p>
+                        Supporting evidence-based and culturally appropriate
+                        approaches to improve equitable vaccine access.
+                    </p>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 30px;">
+                My goal is to move beyond identifying barriers to vaccination and
+                contribute to the development and evaluation of evidence-based,
+                culturally appropriate, and scalable interventions that improve
+                vaccine confidence and uptake.
+            </p>
+
+        </section>
+
+
+        <!-- SURVEILLANCE -->
+        <section class="section" id="surveillance">
+
+            <div class="section-header">
+                <div class="section-number">06 — Health Systems</div>
+                <h2>Disease Surveillance &amp; Health System Experience</h2>
+            </div>
+
+            <p>
+                My professional work has also provided practical experience with
+                disease surveillance, outbreak preparedness, preventive health
+                programs, and health-system coordination.
+            </p>
+
+            <p>
+                Working in a resource-constrained and humanitarian environment
+                has strengthened my understanding of how surveillance, early
+                detection, community engagement, referral systems, and coordinated
+                service delivery contribute to effective public health responses.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">📡</div>
+                    <h3>Disease Surveillance</h3>
+                    <p>
+                        Supporting monitoring and early detection of public health
+                        threats and emerging health needs.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h3>Outbreak Preparedness</h3>
+                    <p>
+                        Contributing to preparedness and coordinated response in
+                        resource-constrained settings.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Community Engagement</h3>
+                    <p>
+                        Working with communities and stakeholders to strengthen
+                        health awareness and service utilization.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <h3>Health-System Coordination</h3>
+                    <p>
+                        Supporting coordination between healthcare providers,
+                        facilities, government counterparts, and partners.
+                    </p>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 30px;">
+                These experiences have reinforced my interest in health systems
+                research and implementation science, particularly in understanding
+                why evidence-based interventions succeed in some settings but
+                encounter barriers in others.
+            </p>
+
+        </section>
+
+
+        <!-- RESEARCH JOURNEY -->
+        <section class="section" id="research">
+
+            <div class="section-header">
+                <div class="section-number">07 — Research Perspective</div>
+                <h2>From Clinical Practice to Research</h2>
+            </div>
+
+            <p>
+                My transition from clinical medicine to public health research has
+                been driven by a fundamental question:
+            </p>
+
+            <div class="vision">
+                <h2>
+                    How can we move from treating individual illness to preventing
+                    disease and improving health at the population level?
+                </h2>
+
+                <p>
+                    Clinical practice taught me to understand the experiences and
+                    needs of individual patients. Public health training taught me
+                    to investigate patterns and determinants of health across
+                    populations. My humanitarian and field experience has shown me
+                    how social, environmental, behavioral, and health-system
+                    factors interact in real-world settings.
+                </p>
+            </div>
+
+            <div class="journey">
+
+                <div class="journey-item">
+                    <h3>Clinical Medicine</h3>
+                    <p>
+                        Understanding individual patients, clinical conditions,
+                        preventive care, and patient-centered healthcare.
+                    </p>
+                </div>
+
+                <div class="journey-item">
+                    <h3>Public Health Training</h3>
+                    <p>
+                        Developing epidemiological, statistical, research, health
+                        systems, and policy perspectives.
+                    </p>
+                </div>
+
+                <div class="journey-item">
+                    <h3>Humanitarian Field Experience</h3>
+                    <p>
+                        Applying public health knowledge in complex,
+                        resource-constrained, and vulnerable populations.
+                    </p>
+                </div>
+
+                <div class="journey-item">
+                    <h3>Public Health Research</h3>
+                    <p>
+                        Moving toward evidence generation, implementation,
+                        evaluation, and policy-relevant research.
+                    </p>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 30px;">
+                Together, these experiences have shaped my research perspective
+                and strengthened my commitment to evidence-based public health.
+            </p>
+
+        </section>
+
+
+        <!-- DOCTORAL RESEARCH -->
+        <section class="section" id="doctoral">
+
+            <div class="section-header">
+                <div class="section-number">08 — Future Direction</div>
+                <h2>Preparing for Doctoral Research</h2>
+            </div>
+
+            <p>
+                My professional experience has provided me with a practical
+                understanding of the complex health challenges that I now seek to
+                investigate through rigorous doctoral research.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Epidemiology</h3>
+                    <p>
+                        Investigating population-level patterns, determinants,
+                        risk factors, and health outcomes.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Implementation Science</h3>
+                    <p>
+                        Understanding how evidence-based interventions can be
+                        effectively implemented in real-world settings.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Behavioral Science</h3>
+                    <p>
+                        Examining behavioral, social, cultural, and communication
+                        factors affecting health decisions.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Climate &amp; Health</h3>
+                    <p>
+                        Exploring the relationship between environmental change,
+                        health systems, vulnerability, and population health.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="vision">
+
+                <h2>Long-Term Research Vision</h2>
+
+                <p>
+                    At the doctoral level, I hope to build on my clinical and
+                    field experience to investigate interventions that can improve
+                    vaccination, maternal and child health, and health-system
+                    resilience, particularly among vulnerable populations in
+                    low- and middle-income countries.
+                </p>
+
+                <p>
+                    Ultimately, I aim to develop a career that bridges clinical
+                    practice, public health research, policy, and implementation.
+                    I hope to contribute to research that is methodologically
+                    rigorous, responsive to community needs, and capable of
+                    informing policies and interventions that produce measurable
+                    improvements in health equity.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOSING -->
+        <section class="section">
+
+            <div class="intro">
+
+                <h2 style="color:#123b50; margin-bottom:18px;">
+                    The Next Stage
+                </h2>
+
+                <p>
+                    My clinical foundation, public health education, humanitarian
+                    field experience, and emerging research portfolio have
+                    collectively prepared me for the next stage of my academic
+                    journey: doctoral training and the development of an
+                    independent research career in public and global health.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Clinical &amp; Public Health Experience
+        </p>
+    </footer>
+
+</body>
+</html>
+
+<!-- Footer Start -->
+    
+
+<div id="footer"></div>
+
+<script>
+ // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+ fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+	<!-- Footer End -->
